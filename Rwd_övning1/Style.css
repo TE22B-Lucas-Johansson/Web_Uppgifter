@@ -1,0 +1,82 @@
+.header, footer{
+    text-align: center;
+    min-width: auto;
+}
+
+h1 { font-size: calc(1.5rem + 3vw);}
+
+h2 { font-size: calc(1rem + 2vw);}
+
+p { font-size: calc(1rem + 00.5rem);}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+    align-items: center;
+}
+
+.article > img{
+    max-width: 80%;
+    max-height: auto;
+}
+
+footer{
+    background-color: black;
+    padding: 5px;
+    width: 80vw;
+    margin: auto;
+}
+
+footer > a{
+    color: white;
+    font-style: bold;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav > a{
+    margin: 2px;
+    padding-left: 2%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-style: bold;
+    background-color: black;
+    border: 2px solid lightblue;
+    color: white;
+    min-width: 321px;
+}
+
+/* för tablet layouts */
+@media screen and (min-width: 641px)and (max-widht: 1071px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* För dator layouts */
+@media screen and (min-width: 1008px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
